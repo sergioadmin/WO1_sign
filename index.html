@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<base target="_top">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>ВО ДО - Mobile Leaflet</title>
+	
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" /> -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="m
+	crossorigin=""/>
+
+	 <!-- Make sure you put this AFTER Leaflet's CSS -->
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+	crossorigin=""></script>
+	
+	<link rel="stylesheet" href="css/leaflet.groupedlayercontrol.min.css" />
+	<script src="js/leaflet.groupedlayercontrol.min.js"></script>
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+	  .legend i {
+			width: 18px;
+			height: 18px;
+			float: right;
+			margin-right: 4px;
+			opacity: 0.75;
+	  }
+	  .info {
+		  padding: 6px 8px;
+		  font: 14px/16px Arial, Helvetica, sans-serif;
+		  background: white;
+		  background: rgba(255,255,255,0.8);
+		  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		  border-radius: 5px;
+	  }
+	  .my_table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+	 tr:nth-child(even) td { background-color: rgb(250, 250, 250); }
+	 tr:nth-child(odd) td { background-color: rgb(240, 240, 240); }
+  
+	 .legend_table, th, td {
+		border-style: none
+	 }
+	 .name_row {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: right;
+      font-weight: bold;
+      font-style: italic;
+      column-span: 2;
+    }
+    .row_value {
+      border: 1px solid black;
+    }
+	 body { padding: 0; margin: 0; } 
+	 #map { height: 100%; width: 100vw; }
+	</style>
+</head>
+<body>
+	<script src="js/data-2.js"></script>
+	<script src="js/WO.js"></script>
+
+	<div id='map'></div>
+
+	<script src="js/vendor/fuse.js"></script>
+	<script src="src/leaflet.fusesearch.js"></script>
+	<link rel="stylesheet" href="css/leaflet.fusesearch.css" />
+
+	<script src="js/main.js"></script>
+</body>
+</html>
